@@ -18,7 +18,7 @@ $interval = new DateInterval('P1D');    // set the interval as 1 day
 $daterange = new DatePeriod($startDate, $interval ,$endDate);
 foreach($daterange as $date){
 if($date->format("N") <6 AND !in_array($date->format("Y-m-d"),$holiday))
-$result = $date->format("Y-m-d");
+$result[] = $date->format("Y-m-d");
 }
 #echo "<pre>";print_r($result);
 
